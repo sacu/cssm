@@ -13,7 +13,7 @@ import org.springframework.context.annotation.PropertySource;
 
 @ComponentScan(basePackages = { "org.jiira.chapter10.*" }, excludeFilters = {
 		@Filter(type = FilterType.REGEX, pattern = "org.jiira.chapter10.annotation.config.ApplicationConfig") })
-@PropertySource(value = { "classpath:database-config.properties" }, ignoreResourceNotFound = true)
+@PropertySource(value = { "classpath:config/spring10/database-config10.properties" }, ignoreResourceNotFound = true)
 public class AutowiredConfig {
 	
 	@Bean(name = "dataSource")

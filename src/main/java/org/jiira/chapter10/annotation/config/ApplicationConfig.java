@@ -17,8 +17,8 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.jiira.chapter10.annotation.condition.DataSourceCondition;
 import org.jiira.chapter10.annotation.pojo.Role;
 import org.jiira.chapter10.annotation.service.impl.RoleServiceImpl;
-import org.jiira.chapter9.pojo.JuiceMaker2;
-import org.jiira.chapter9.pojo.Source;
+import org.jiira.chapter10.annotation.pojo.JuiceMaker2;
+import org.jiira.chapter10.annotation.pojo.Source;
 
 @ComponentScan(basePackageClasses = { Role.class, RoleServiceImpl.class }, 
 excludeFilters = {@Filter(type = FilterType.REGEX, pattern="org.jiira.chapter10.annotation.config.AutowiredConfig")})
@@ -30,7 +30,7 @@ excludeFilters = {@Filter(type = FilterType.REGEX, pattern="org.jiira.chapter10.
 
 //测试test8的时候引入下面的XML，同时注释现有数据库连接池的方法
 //@ImportResource({"classpath:spring-dataSource.xml"})
-@PropertySource(value={"classpath:database-config.properties"}, ignoreResourceNotFound=true)
+@PropertySource(value={"classpath:config/spring10/database-config10.properties"}, ignoreResourceNotFound=true)
 public class ApplicationConfig {
 	
 	@Bean
@@ -45,9 +45,9 @@ public class ApplicationConfig {
 	public DataSource getDataSource() {
 		Properties props = new Properties();
 		props.setProperty("driver", "com.mysql.jdbc.Driver");
-		props.setProperty("url", "jdbc:mysql://localhost:3306/chapter10");
-		props.setProperty("username", "root");
-		props.setProperty("password", "123456");
+		props.setProperty("url", "jdbc:mysql://qdm169383443.my3w.com:3306/qdm169383443_db");
+		props.setProperty("username", "qdm169383443");
+		props.setProperty("password", "521haiqi");
 		DataSource dataSource = null;
 		try {
 			dataSource = BasicDataSourceFactory.createDataSource(props);

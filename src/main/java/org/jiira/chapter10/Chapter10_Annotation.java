@@ -6,6 +6,7 @@ import javax.sql.DataSource;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.stereotype.Component;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.jiira.chapter10.annotation.config.ApplicationConfig;
 import org.jiira.chapter10.annotation.config.AutowiredConfig;
@@ -20,15 +21,15 @@ import org.jiira.chapter10.annotation.service.RoleService2;
 public class Chapter10_Annotation {
 	public static void main(String[] args) {
 		DOMConfigurator.configureAndWatch("config/log4j.xml", 2000);
-		test1();
+//		test1();//扫描，不设置路径，就为当前扫描类所在的目录,需要使用注解@Component注册
 		test2();
-		test3();
-		test4();
-		test5();
-		test6();
-		test7();
-		test8() ;
-		test9();
+//		test3();
+//		test4();
+//		test5();
+//		test6();
+//		test7();
+//		test8();
+//		test9();
 	}
 
 	private static void test1() {
