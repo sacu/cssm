@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.jiira.chapter6.mapper.RoleMapper">
+
+	<resultMap id="roleResultMap" type="org.jiira.chapter6.pojo.Role">
+		<id column="id" property="id" />
+		<id column="role_name" property="roleName" />
+		<id column="note" property="note" />
+	</resultMap>
+
+	<select id="findRole1" parameterType="string" resultMap="roleResultMap">
+		select id, role_name, note from t_role where 1=1
+		<if test="roleName != null and roleName !=''">
+			and role_name like concat('%', #{roleName}, '%')
+		</if>
+	</select>
+
+
+	<select id="findRole3" parameterType="role" resultMap="roleResultMap">
+		select id, role_name, note from t_role
+		<where>
+			<if test="roleName != null and roleName !=''">
+				and role_name like concat('%', #{roleName}, '%')
+			</if>
+			<if test="note != null and note !=''">
+				and note like concat('%', #{note}, '%')
+			</if>
+		</where>
+	</select>
+
+	<select id="findRole4" parameterType="string" resultMap="roleResultMap">
+		select id, role_name, note from t_role
+		<trim prefix="where" prefixOverrides="and">
+			<if test="roleName != null and roleName !=''">
+				and role_name like concat('%', #{roleName}, '%')
+			</if>
+		</trim>
+	</select>
+
+	<select id="findRole5" parameterType="string" resultMap="roleResultMap">
+		<bind name="pattern" value="'%' + _parameter + '%'" />
+		SELECT id, role_name, note FROM t_role
+		where role_name like #{pattern}
+	</select>
+
+	<select id="findRole6" resultMap="roleResultMap">
+		<bind name="pattern_roleName" value="'%' + roleName + '%'" />
+		<bind name="pattern_note" value="'%' + note + '%'" />
+		SELECT id, role_name, note FROM t_role
+		where role_name like
+		#{pattern_roleName}
+		and note like #{pattern_note}
+	</select>
+
+	<update id="updateRole" parameterType="role">
+		update t_role
+		<set>
+			<if test="roleName != null and roleName !=''">
+				role_name = #{roleName},
+			</if>
+			<if test="note != null and note != ''">
+				note = #{note}
+			</if>
+		</set>
+		where id = #{id}
+	</update>
+
+	<select id="findRoleByNums" resultMap="roleResultMap">
+		select id, role_name, note from t_role where id in
+		<foreach item="id" index="index" collection="roleNoList"
+			open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</select>
+
+	<select id="getRoleTest" parameterType="string" resultMap="roleResultMap">
+		select id, role_name, note from t_role
+		<if test="type == 'Y'.toString()">
+			where 1=1
+		</if>
+	</select>
+
+</mapper>
