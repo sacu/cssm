@@ -26,12 +26,13 @@ import org.apache.ibatis.reflection.MetaObject;
 import org.apache.ibatis.reflection.SystemMetaObject;
 import org.apache.ibatis.scripting.defaults.DefaultParameterHandler;
 import org.apache.ibatis.session.Configuration;
-
+import org.apache.log4j.Logger;
 import org.jiira.chapter8.params.PageParams;
 
 @Intercepts({
 		@Signature(type = StatementHandler.class, method = "prepare", args = { Connection.class, Integer.class }) })
 public class PagePlugin implements Interceptor {
+	private Logger log = Logger.getLogger(PagePlugin.class);
 	/**
 	 * 插件默认参数，可配置默认值.
 	 */
@@ -43,16 +44,25 @@ public class PagePlugin implements Interceptor {
 
 	@Override
 	public Object intercept(Invocation invocation) throws Throwable {
+		log.info("intercept");
+		//从代理对象中分离出真实对象
 		StatementHandler stmtHandler = (StatementHandler) getUnProxyObject(invocation.getTarget());
+		/**
+		 * 转化包装对象
+		 * 通过getValue获取属性值
+		 * 通过setValue修改属性值
+		 * 可用来操作四大对象
+		 */
 		MetaObject metaStatementHandler = SystemMetaObject.forObject(stmtHandler);
 		String sql = (String) metaStatementHandler.getValue("delegate.boundSql.sql");
 		MappedStatement mappedStatement = (MappedStatement) metaStatementHandler.getValue("delegate.mappedStatement");
-		// 不是select语句
+		// 判断是否不是select语句
 		if (!checkSelect(sql)) {
 			return invocation.proceed();
 		}
 		BoundSql boundSql = (BoundSql) metaStatementHandler.getValue("delegate.boundSql");
 		Object parameterObject = boundSql.getParameterObject();
+		//解析出页面参数
 		PageParams pageParams = getPageParamsForParamObj(parameterObject);
 		if (pageParams == null) { // 无法获取分页参数，不进行分页
 			return invocation.proceed();
@@ -91,6 +101,7 @@ public class PagePlugin implements Interceptor {
 	 * @return 非代理StatementHandler对象
 	 */
 	private Object getUnProxyObject(Object target) {
+		log.info("getUnProxyObject");
 		MetaObject metaStatementHandler = SystemMetaObject.forObject(target);
 		// 分离代理对象链(由于目标类可能被多个拦截器拦截，从而形成多次代理，通过循环可以分离出最原始的目标类)
 		Object object = null;
@@ -115,6 +126,7 @@ public class PagePlugin implements Interceptor {
 	 * @return 是否查询语句
 	 */
 	private boolean checkSelect(String sql) {
+		log.info("checkSelect");
 		String trimSql = sql.trim();
 		int idx = trimSql.toLowerCase().indexOf("select");
 		return idx == 0;
@@ -129,6 +141,7 @@ public class PagePlugin implements Interceptor {
 	 * @throws Exception
 	 */
 	public PageParams getPageParamsForParamObj(Object parameterObject) throws Exception {
+		log.info("getPageParamsForParamObj");
 		PageParams pageParams = null;
 		if (parameterObject == null) {
 			return null;
@@ -179,6 +192,7 @@ public class PagePlugin implements Interceptor {
 	 */
 	private int getTotal(Invocation ivt, MetaObject metaStatementHandler, BoundSql boundSql, Boolean cleanOrderBy)
 			throws Throwable {
+		log.info("getTotal");
 		// 获取当前的mappedStatement
 		MappedStatement mappedStatement = (MappedStatement) metaStatementHandler.getValue("delegate.mappedStatement");
 		// 配置对象
@@ -221,6 +235,7 @@ public class PagePlugin implements Interceptor {
 	}
 
 	private String cleanOrderByForSql(String sql) {
+		log.info("cleanOrderByForSql");
 		StringBuilder sb = new StringBuilder(sql);
 		String newSql = sql.toLowerCase();
 		// 如果没有order语句,直接返回
@@ -243,6 +258,7 @@ public class PagePlugin implements Interceptor {
 	 * @throws Throwable
 	 */
 	private void checkPage(Boolean checkFlag, Integer pageNum, Integer pageTotal) throws Throwable {
+		log.info("checkPage");
 		if (checkFlag) {
 			// 检查页码page是否合法
 			if (pageNum > pageTotal) {
@@ -271,6 +287,7 @@ public class PagePlugin implements Interceptor {
 	 */
 	private Object preparedSQL(Invocation invocation, MetaObject metaStatementHandler, BoundSql boundSql, int pageNum,
 			int pageSize) throws Exception {
+		log.info("preparedSQL");
 		// 获取当前需要执行的SQL
 		String sql = boundSql.getSql();
 		String newSql = "select * from (" + sql + ") $_paging_table limit ?, ?";
@@ -291,6 +308,7 @@ public class PagePlugin implements Interceptor {
 	 *
 	 */
 	private void preparePageDataParams(PreparedStatement ps, int pageNum, int pageSize) throws Exception {
+		log.info("preparePageDataParams");
 		// prepared()方法编译SQL，由于MyBatis上下文没有分页参数的信息，所以这里需要设置这两个参数
 		// 获取需要设置的参数个数，由于参数是最后的两个，所以很容易得到其位置
 		int idx = ps.getParameterMetaData().getParameterCount();
@@ -301,6 +319,7 @@ public class PagePlugin implements Interceptor {
 
 	@Override
 	public Object plugin(Object target) {
+		log.info("plugin");
 		// 生成代理对象.
 		return Plugin.wrap(target, this);
 	}
@@ -313,6 +332,7 @@ public class PagePlugin implements Interceptor {
 	 */
 	@Override
 	public void setProperties(Properties props) {
+		log.info("setProperties");
 		// 从配置中获取参数
 		String strDefaultPage = props.getProperty("default.page", "1");
 		String strDefaultPageSize = props.getProperty("default.pageSize", "50");

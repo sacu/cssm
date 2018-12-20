@@ -76,5 +76,6 @@ public class MyPlugin implements Interceptor {
 	public void setProperties(Properties props) {
 		this.props = props;
 		log.info("dbType = " + this.props.get("dbType"));
+		log.info("sacu = " + this.props.get("sacu"));
 	}
 }

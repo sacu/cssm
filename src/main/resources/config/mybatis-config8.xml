@@ -9,13 +9,18 @@
 
 	<plugins>
 		<!-- 该插件和分页插件不兼容，测试分页插件时，需要注释掉他 -->
+		<!--
 		<plugin interceptor="org.jiira.chapter8.plugin.MyPlugin">
-			<property name="dbType" value="mysql" />
+			<property name="dbType" value="mysql" /> <property name="sacu" value="test" />
 		</plugin>
-		<!-- <plugin interceptor="org.jiira.chapter8.plugin.PagePlugin"> <property 
-			name="default.page" value="1" /> <property name="default.pageSize" value="20" 
-			/> <property name="default.useFlag" value="true" /> <property name="default.checkFlag" 
-			value="false" /> <property name="default.cleanOrderBy" value="false" /> </plugin> -->
+		-->
+		<plugin interceptor="org.jiira.chapter8.plugin.PagePlugin">
+			<property name="default.page" value="1" />
+			<property name="default.pageSize" value="20" />
+			<property name="default.useFlag" value="true" />
+			<property name="default.checkFlag" value="false" />
+			<property name="default.cleanOrderBy" value="false" />
+		</plugin>
 	</plugins>
 
 	<!-- 数据库环境 -->
