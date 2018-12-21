@@ -5,8 +5,11 @@ import java.util.Properties;
 import javax.sql.DataSource;
 
 import org.apache.commons.dbcp.BasicDataSourceFactory;
+import org.jiira.chapter10.annotation.condition.DataSourceCondition;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.context.annotation.PropertySource;
@@ -31,4 +34,5 @@ public class AutowiredConfig {
 		}
 		return dataSource;
 	}
+
 }

@@ -9,15 +9,19 @@ import org.jiira.chapter10.annotation.service.RoleService2;
 @Component("RoleService2")
 public class RoleServiceImpl2 implements RoleService2 {
 
-	@Autowired
+//	@Autowired
 	private Role role = null;
 
 	public Role getRole() {
 		return role;
 	}
 
-//	@Autowired
+	@Autowired
 	public void setRole(Role role) {
+		/**
+		 * spring ioc自动装配的时候会调用一次
+		 */
+//		System.out.print("执行了函数自动装配");
 		this.role = role;
 	}
 

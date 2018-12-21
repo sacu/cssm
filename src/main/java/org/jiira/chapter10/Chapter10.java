@@ -9,16 +9,19 @@ import org.jiira.chapter10.pojo.UserRoleAssembly;
 public class Chapter10 {
 	public static void main(String[] args) {
 		DOMConfigurator.configureAndWatch("config/log4j.xml", 2000);
-		test3();
+		test2();
 	}
 	public static void test1() {
 		ApplicationContext context = 
-	             new ClassPathXmlApplicationContext("spring-config.xml");
+	             new ClassPathXmlApplicationContext("config/spring10/spring-config10.xml");
+		/**
+		 * 通过配置文件设置 UserRoleAssembly初始化四个参数
+		 */
 		UserRoleAssembly userRoleAssembly = context.getBean(UserRoleAssembly.class);
 			System.err.println(userRoleAssembly.getList().get(0).getId());
 	}
 	public static void test2() {
-		ApplicationContext context = new ClassPathXmlApplicationContext("spring-props.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("config/spring10/spring-props10.xml");
 		DataSourceBean dsBean = context.getBean(DataSourceBean.class);
 		System.out.println(dsBean.getUrl());
 	}

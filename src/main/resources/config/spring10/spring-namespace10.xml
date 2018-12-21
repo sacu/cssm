@@ -3,6 +3,7 @@
 	xmlns:util="http://www.springframework.org/schema/util" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+       
 	<bean id="role1" class="org.jiira.chapter10.pojo.Role" 
 	c:_0="1" c:_1="role_name_1" c:_2="role_note_1" />
 	<bean id="role2" class="org.jiira.chapter10.pojo.Role" 
