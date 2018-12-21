@@ -1,4 +1,4 @@
-package org.jiira.chapter9;
+package org.jiira.chapter10;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,14 +10,17 @@ import org.springframework.expression.ExpressionParser;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
 import org.springframework.expression.spel.support.StandardEvaluationContext;
 
-import org.jiira.chapter9.el.pojo.ElBean;
-import org.jiira.chapter9.el.pojo.Role;
+import org.jiira.chapter10.el.pojo.ElBean;
+import org.jiira.chapter10.el.pojo.Role;
 import org.apache.log4j.xml.DOMConfigurator;
-import org.jiira.chapter9.el.config.ElConfig;
+import org.jiira.chapter10.el.config.ElConfig;
 
-public class ElMain {
+public class Chapter10_ElMain {
 
 	public static void main(String[] args) {
+		/**
+		 * spring el表达式
+		 */
 		DOMConfigurator.configureAndWatch("config/log4j.xml", 2000);
 //		test1();//表达式解析器
 		test2();//注解方式控制反转 借助 依赖注入 获得实例
@@ -77,9 +80,9 @@ public class ElMain {
 	public static void test2() {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ElConfig.class);
 		/**
-		 * 向spring需求ElBean
-		 * spring检测ElBean属性需要Role
-		 * Role有默认值，则Role的默认值填充到ElBean
+		 * ElBean.role 通过依赖注入得到role对象
+		 * ElBean.id和ElBean.note通过el表达式进行赋值
+		 * #{role.id}和#{role.note}
 		 */
 		ElBean elBean = context.getBean(ElBean.class);
 		//读取的是本地文件

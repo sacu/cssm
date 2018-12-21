@@ -1,4 +1,4 @@
-package org.jiira.chapter9.el.pojo;
+package org.jiira.chapter10.el.pojo;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

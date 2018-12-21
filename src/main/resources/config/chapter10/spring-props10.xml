@@ -15,9 +15,8 @@
 	<!-- <context:property-placeholder ignore-resource-not-found="false" location="classpath:database-config.properties" 
 		/> -->
 	<!--字符串数组，可配置多个属性文件 -->
-	<bean
+	<bean id="prop"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-
 		<property name="locations">
 			<array>
 				<value>classpath:config/spring10/database-config10.properties

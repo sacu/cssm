@@ -10,11 +10,13 @@ import javax.sql.DataSource;
 import org.jiira.chapter10.annotation.pojo.Role;
 import org.jiira.chapter10.annotation.service.RoleDataSourceService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
 @Component
-// @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+@Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class RoleDataSourceServiceImpl implements RoleDataSourceService {
 
 	@Autowired

@@ -1,25 +1,15 @@
-package org.jiira.chapter9.el.pojo;
+package org.jiira.chapter11.game.pojo;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
-
-@Component("role")
 public class Role {
-	// 赋值long型
-	@Value("#{198}")
+
 	private Long id;
-	// 字符串赋值
-	@Value("#{'sa_role_name_1'}")
 	private String roleName;
-	// 字符串赋值
-	@Value("#{'sa_note_1'}")
 	private String note;
 	
 	public Role() {
-		
 	}
 	
-	public Role(Long id, String roleName, String note) {
+	public Role(Long id, String roleName,String note) {
 		this.id = id;
 		this.roleName = roleName;
 		this.note = note;
@@ -48,6 +38,5 @@ public class Role {
 	public void setNote(String note) {
 		this.note = note;
 	}
-	
-	
+
 }

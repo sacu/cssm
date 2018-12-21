@@ -1,4 +1,4 @@
-package org.jiira.chapter9.el.config;
+package org.jiira.chapter10.el.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
