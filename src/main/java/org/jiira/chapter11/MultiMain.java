@@ -19,7 +19,6 @@ public class MultiMain {
 			ApplicationContext ctx = new AnnotationConfigApplicationContext(MultiConfig.class);
 			MultiBean multiBean = ctx.getBean(MultiBean.class);
 			multiBean.testMulti();
-			
 		}
 	}
 
