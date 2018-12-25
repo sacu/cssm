@@ -7,6 +7,6 @@
         http://www.springframework.org/schema/aop 
         http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
 	<aop:aspectj-autoproxy />
-	<bean id="roleAspect" class="com.ssm.chapter11.aop.aspect.RoleAspect" />
-	<bean id="roleService" class="com.ssm.chapter11.aop.service.impl.RoleServiceImpl" />
+	<bean id="roleAspect" class="org.jiira.chapter11.aop.aspect.RoleAspect" />
+	<bean id="roleService" class="org.jiira.chapter11.aop.service.impl.RoleServiceImpl" />
 </beans>

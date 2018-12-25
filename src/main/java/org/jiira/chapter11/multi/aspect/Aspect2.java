@@ -9,7 +9,7 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.core.annotation.Order;
 
 @Aspect
-@Order(2)
+//@Order(2)
 public class Aspect2 {
 	
 	@Pointcut("execution(* org.jiira.chapter11.multi.bean.impl.MultiBeanImpl.testMulti(..))")

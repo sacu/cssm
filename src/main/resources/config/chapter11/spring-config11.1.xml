@@ -4,21 +4,21 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 
-	<bean id="proxyFactoryBeanAspect" class="com.ssm.chapter11.aspect.ProxyFactoryBeanAspect" />
+	<bean id="proxyFactoryBeanAspect" class="org.jiira.chapter11.aspect.ProxyFactoryBeanAspect" />
 
 	<!--设定代理类 -->
 	<bean id="roleService" class="org.springframework.aop.framework.ProxyFactoryBean">
 		<!--这里代理的是接口 -->
 		<property name="proxyInterfaces">
-			<value>com.ssm.chapter11.game.service.RoleService</value>
+			<value>org.jiira.chapter11.game.service.RoleService</value>
 		</property>
 
 		<!--是ProxyFactoryBean要代理的目标类 -->
 		<property name="target">
-			<bean class="com.ssm.chapter11.game.service.impl.RoleServiceImpl" />
+			<bean class="org.jiira.chapter11.game.service.impl.RoleServiceImpl" />
 		</property>
 
-		<!--定义通知 -->
+		<!--定义通知 拦截器-->
 		<property name="interceptorNames">
 			<list>
 				<!-- 引入定义好的spring bean -->

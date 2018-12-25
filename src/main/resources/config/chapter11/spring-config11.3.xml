@@ -6,37 +6,37 @@
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
 
-	<bean id="xmlAspect" class="com.ssm.chapter11.xml.aspect.XmlAspect" />
-	<bean id="roleService" class="com.ssm.chapter11.xml.service.impl.RoleServiceImpl" />
+	<bean id="xmlAspect" class="org.jiira.chapter11.xml.aspect.XmlAspect" />
+	<bean id="roleService" class="org.jiira.chapter11.xml.service.impl.RoleServiceImpl" />
 
     <!-- 
 	<aop:config>
 		
 		<aop:aspect ref="xmlAspect">
 			<aop:before method="before"
-				pointcut="execution(* com.ssm.chapter11.xml.service.impl.RoleServiceImpl.printRole(..))" />
+				pointcut="execution(* org.jiira.chapter11.xml.service.impl.RoleServiceImpl.printRole(..))" />
 			<aop:after method="after"
-				pointcut="execution(* com.ssm.chapter11.xml.service.impl.RoleServiceImpl.printRole(..))" />
+				pointcut="execution(* org.jiira.chapter11.xml.service.impl.RoleServiceImpl.printRole(..))" />
 			<aop:after-throwing method="afterThrowing"
-				pointcut="execution(* com.ssm.chapter11.xml.service.impl.RoleServiceImpl.printRole(..))" />
+				pointcut="execution(* org.jiira.chapter11.xml.service.impl.RoleServiceImpl.printRole(..))" />
 			<aop:after-returning method="afterReturning"
-				pointcut="execution(* com.ssm.chapter11.xml.service.impl.RoleServiceImpl.printRole(..))" />
+				pointcut="execution(* org.jiira.chapter11.xml.service.impl.RoleServiceImpl.printRole(..))" />
 			<aop:around method="around"
-				pointcut="execution(* com.ssm.chapter11.xml.service.impl.RoleServiceImpl.printRole(..))" />
+				pointcut="execution(* org.jiira.chapter11.xml.service.impl.RoleServiceImpl.printRole(..))" />
 			<aop:declare-parents
-				types-matching="com.ssm.chapter11.xml.service.impl.RoleServiceImpl+"
-				implement-interface="com.ssm.chapter11.aop.verifier.RoleVerifier"
-				default-impl="com.ssm.chapter11.aop.verifier.impl.RoleVerifierImpl" />
+				types-matching="org.jiira.chapter11.xml.service.impl.RoleServiceImpl+"
+				implement-interface="org.jiira.chapter11.aop.verifier.RoleVerifier"
+				default-impl="org.jiira.chapter11.aop.verifier.impl.RoleVerifierImpl" />
 		</aop:aspect>
 	</aop:config>
 	 -->
 	
 	<aop:config>
-		<aop:aspect ref="xmlAspect">
-		    <!-- 自定义切点 -->
+		<aop:aspect ref="xmlAspect"><!-- 通过ref查找连接点名称 -->
+		    <!-- 自定义切点		RoleAspect中的公共切点函数print()-->
 			<aop:pointcut id="printRole"
-				expression="execution(* com.ssm.chapter11.xml.service.impl.RoleServiceImpl.printRole(..))" />
-			<!-- 定义通知 -->
+				expression="execution(* org.jiira.chapter11.xml.service.impl.RoleServiceImpl.printRole(..))" />
+			<!-- 定义通知		拦截器RoleAspect-->
 			<aop:before method="before" pointcut-ref="printRole" />
 			<aop:after method="after" pointcut-ref="printRole" />
 			<aop:after-throwing method="afterThrowing"
@@ -44,11 +44,11 @@
 			<aop:after-returning method="afterReturning"
 				pointcut-ref="printRole" />
 			<aop:around method="around" pointcut-ref="printRole" />
-			<!-- 引入增强 -->
+			<!-- 引入增强		@DeclareParents-->
 			<aop:declare-parents
-				types-matching="com.ssm.chapter11.xml.service.impl.RoleServiceImpl+"
-				implement-interface="com.ssm.chapter11.aop.verifier.RoleVerifier"
-				default-impl="com.ssm.chapter11.aop.verifier.impl.RoleVerifierImpl" />
+				types-matching="org.jiira.chapter11.xml.service.impl.RoleServiceImpl+"
+				implement-interface="org.jiira.chapter11.aop.verifier.RoleVerifier"
+				default-impl="org.jiira.chapter11.aop.verifier.impl.RoleVerifierImpl" />
 		</aop:aspect>
 	</aop:config>
 </beans>

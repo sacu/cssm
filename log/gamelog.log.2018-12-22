@@ -1,0 +1,167 @@
+2018/12/21 00:23:36.154  INFO (MyPlugin.java:78) - dbType = mysql
+2018/12/21 00:24:40.917  INFO (MyPlugin.java:78) - dbType = mysql
+2018/12/21 00:24:41.906  INFO (MyPlugin.java:46) - 执行的SQL：【select id, role_name as roleName, note from t_role where id = ?】
+2018/12/21 00:24:41.912  INFO (MyPlugin.java:47) - 参数：【1】
+2018/12/21 00:24:41.913  INFO (MyPlugin.java:48) - before ......
+2018/12/21 00:24:41.940  INFO (MyPlugin.java:52) - after ......
+2018/12/21 00:24:41.994  INFO (Chapter8Main.java:28) - role_name_1_update
+2018/12/21 01:37:36.108  INFO (MyPlugin.java:78) - dbType = mysql
+2018/12/21 01:37:36.109  INFO (MyPlugin.java:79) - sacu = test
+2018/12/21 01:37:37.019  INFO (MyPlugin.java:46) - 执行的SQL：【select id, role_name as roleName, note from t_role where id = ?】
+2018/12/21 01:37:37.020  INFO (MyPlugin.java:47) - 参数：【1】
+2018/12/21 01:37:37.021  INFO (MyPlugin.java:48) - before ......
+2018/12/21 01:37:37.048  INFO (MyPlugin.java:52) - after ......
+2018/12/21 01:37:37.097  INFO (Chapter8.java:54) - role_name_1_update
+2018/12/21 01:41:33.682  INFO (MyPlugin.java:78) - dbType = mysql
+2018/12/21 01:41:33.683  INFO (MyPlugin.java:79) - sacu = test
+2018/12/21 01:42:20.312  INFO (MyPlugin.java:46) - 执行的SQL：【select id, role_name as roleName, note from t_role where id = ?】
+2018/12/21 01:43:04.685  INFO (MyPlugin.java:47) - 参数：【1】
+2018/12/21 01:43:05.271  INFO (MyPlugin.java:48) - before ......
+2018/12/21 01:43:19.771  INFO (MyPlugin.java:52) - after ......
+2018/12/21 02:09:19.152  INFO (Chapter8.java:76) - 4
+2018/12/21 02:10:23.962  INFO (Chapter8.java:76) - 2
+2018/12/21 02:11:00.937  INFO (Chapter8.java:76) - 2
+2018/12/21 02:11:14.672  INFO (Chapter8.java:77) - 2
+2018/12/21 02:11:19.532  INFO (Chapter8.java:77) - 1
+2018/12/21 02:13:26.157  INFO (PagePlugin.java:327) - setProperties
+2018/12/21 02:13:26.232  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:13:26.261  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:13:26.264  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:13:26.265  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:13:27.063  INFO (PagePlugin.java:47) - intercept
+2018/12/21 02:13:27.063  INFO (PagePlugin.java:96) - getUnProxyObject
+2018/12/21 02:13:27.064  INFO (PagePlugin.java:121) - checkSelect
+2018/12/21 02:13:27.064  INFO (PagePlugin.java:136) - getPageParamsForParamObj
+2018/12/21 02:13:27.065  INFO (PagePlugin.java:187) - getTotal
+2018/12/21 02:13:27.117  INFO (PagePlugin.java:253) - checkPage
+2018/12/21 02:13:27.118  INFO (PagePlugin.java:282) - preparedSQL
+2018/12/21 02:13:27.122  INFO (PagePlugin.java:303) - preparePageDataParams
+2018/12/21 02:13:27.178  INFO (Chapter8.java:77) - 1
+2018/12/21 02:14:02.144  INFO (PagePlugin.java:327) - setProperties
+2018/12/21 02:14:12.026  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:14:18.426  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:14:20.570  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:14:25.155  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:14:26.043  INFO (PagePlugin.java:47) - intercept
+2018/12/21 02:14:26.043  INFO (PagePlugin.java:96) - getUnProxyObject
+2018/12/21 02:14:26.045  INFO (PagePlugin.java:121) - checkSelect
+2018/12/21 02:14:26.045  INFO (PagePlugin.java:136) - getPageParamsForParamObj
+2018/12/21 02:14:26.045  INFO (PagePlugin.java:187) - getTotal
+2018/12/21 02:14:26.098  INFO (PagePlugin.java:253) - checkPage
+2018/12/21 02:14:26.098  INFO (PagePlugin.java:282) - preparedSQL
+2018/12/21 02:14:26.102  INFO (PagePlugin.java:303) - preparePageDataParams
+2018/12/21 02:14:26.162  INFO (Chapter8.java:77) - 1
+2018/12/21 02:14:38.462  INFO (PagePlugin.java:327) - setProperties
+2018/12/21 02:14:41.995  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:14:42.060  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:14:42.062  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:14:42.062  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:14:42.787  INFO (PagePlugin.java:47) - intercept
+2018/12/21 02:14:42.787  INFO (PagePlugin.java:96) - getUnProxyObject
+2018/12/21 02:14:42.789  INFO (PagePlugin.java:121) - checkSelect
+2018/12/21 02:14:42.790  INFO (PagePlugin.java:136) - getPageParamsForParamObj
+2018/12/21 02:14:42.790  INFO (PagePlugin.java:187) - getTotal
+2018/12/21 02:14:42.844  INFO (PagePlugin.java:253) - checkPage
+2018/12/21 02:14:42.845  INFO (PagePlugin.java:282) - preparedSQL
+2018/12/21 02:14:42.847  INFO (PagePlugin.java:303) - preparePageDataParams
+2018/12/21 02:14:42.889  INFO (Chapter8.java:77) - 0
+2018/12/21 02:14:58.994  INFO (PagePlugin.java:327) - setProperties
+2018/12/21 02:14:59.071  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:15:11.171  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:15:17.668  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:15:21.597  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:15:40.367  INFO (PagePlugin.java:47) - intercept
+2018/12/21 02:15:40.377  INFO (PagePlugin.java:96) - getUnProxyObject
+2018/12/21 02:15:40.442  INFO (PagePlugin.java:121) - checkSelect
+2018/12/21 02:15:40.446  INFO (PagePlugin.java:136) - getPageParamsForParamObj
+2018/12/21 02:15:40.450  INFO (PagePlugin.java:187) - getTotal
+2018/12/21 02:15:40.544  INFO (PagePlugin.java:253) - checkPage
+2018/12/21 02:15:40.555  INFO (PagePlugin.java:282) - preparedSQL
+2018/12/21 02:15:40.592  INFO (PagePlugin.java:303) - preparePageDataParams
+2018/12/21 02:16:11.877  INFO (Chapter8.java:77) - 0
+2018/12/21 02:17:01.717  INFO (PagePlugin.java:327) - setProperties
+2018/12/21 02:17:01.792  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:17:06.945  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:17:06.948  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:17:06.948  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:17:07.754  INFO (PagePlugin.java:47) - intercept
+2018/12/21 02:17:07.755  INFO (PagePlugin.java:96) - getUnProxyObject
+2018/12/21 02:17:07.757  INFO (PagePlugin.java:121) - checkSelect
+2018/12/21 02:17:07.758  INFO (PagePlugin.java:136) - getPageParamsForParamObj
+2018/12/21 02:17:07.758  INFO (PagePlugin.java:187) - getTotal
+2018/12/21 02:17:07.814  INFO (PagePlugin.java:253) - checkPage
+2018/12/21 02:17:07.814  INFO (PagePlugin.java:282) - preparedSQL
+2018/12/21 02:17:07.817  INFO (PagePlugin.java:303) - preparePageDataParams
+2018/12/21 02:17:07.863  INFO (Chapter8.java:77) - 0
+2018/12/21 02:17:36.693  INFO (PagePlugin.java:327) - setProperties
+2018/12/21 02:17:36.770  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:17:36.800  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:17:36.802  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:17:36.802  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:17:37.621  INFO (PagePlugin.java:47) - intercept
+2018/12/21 02:17:37.621  INFO (PagePlugin.java:96) - getUnProxyObject
+2018/12/21 02:17:37.624  INFO (PagePlugin.java:121) - checkSelect
+2018/12/21 02:17:37.625  INFO (PagePlugin.java:136) - getPageParamsForParamObj
+2018/12/21 02:17:37.626  INFO (PagePlugin.java:187) - getTotal
+2018/12/21 02:17:37.692  INFO (PagePlugin.java:253) - checkPage
+2018/12/21 02:17:37.692  INFO (PagePlugin.java:282) - preparedSQL
+2018/12/21 02:17:37.695  INFO (PagePlugin.java:303) - preparePageDataParams
+2018/12/21 02:17:37.750  INFO (Chapter8.java:77) - 0
+2018/12/21 02:17:48.856  INFO (PagePlugin.java:327) - setProperties
+2018/12/21 02:17:50.075  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:17:58.976  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:17:58.996  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:17:59.000  INFO (PagePlugin.java:314) - plugin
+2018/12/21 02:18:01.420  INFO (PagePlugin.java:47) - intercept
+2018/12/21 02:18:01.435  INFO (PagePlugin.java:96) - getUnProxyObject
+2018/12/21 02:18:01.528  INFO (PagePlugin.java:121) - checkSelect
+2018/12/21 02:18:01.532  INFO (PagePlugin.java:136) - getPageParamsForParamObj
+2018/12/21 02:18:01.536  INFO (PagePlugin.java:187) - getTotal
+2018/12/21 02:18:01.631  INFO (PagePlugin.java:253) - checkPage
+2018/12/21 02:18:01.643  INFO (PagePlugin.java:282) - preparedSQL
+2018/12/21 02:18:01.675  INFO (PagePlugin.java:303) - preparePageDataParams
+2018/12/21 02:18:05.842  INFO (Chapter8.java:77) - 0
+2018/12/21 02:58:24.731  INFO (PagePlugin.java:335) - setProperties
+2018/12/21 02:58:24.810  INFO (PagePlugin.java:322) - plugin
+2018/12/21 02:58:24.840  INFO (PagePlugin.java:322) - plugin
+2018/12/21 02:58:24.843  INFO (PagePlugin.java:322) - plugin
+2018/12/21 02:58:24.843  INFO (PagePlugin.java:322) - plugin
+2018/12/21 02:58:28.737  INFO (PagePlugin.java:47) - intercept
+2018/12/21 02:58:28.737  INFO (PagePlugin.java:104) - getUnProxyObject
+2018/12/21 03:01:39.954  INFO (PagePlugin.java:334) - setProperties
+2018/12/21 03:01:40.029  INFO (PagePlugin.java:321) - plugin
+2018/12/21 03:01:40.061  INFO (PagePlugin.java:321) - plugin
+2018/12/21 03:01:40.064  INFO (PagePlugin.java:321) - plugin
+2018/12/21 03:01:40.064  INFO (PagePlugin.java:321) - plugin
+2018/12/21 03:01:40.853  INFO (PagePlugin.java:47) - intercept
+2018/12/21 03:01:40.854  INFO (PagePlugin.java:103) - getUnProxyObject
+2018/12/21 06:03:14.671  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanInitializationException: Could not load properties; nested exception is java.io.FileNotFoundException: class path resource [database-config.properties] cannot be opened because it does not exist
+2018/12/21 06:04:30.756  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanInitializationException: Could not load properties; nested exception is java.io.FileNotFoundException: class path resource [database-config10.properties] cannot be opened because it does not exist
+2018/12/21 06:04:53.818  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanInitializationException: Could not load properties; nested exception is java.io.FileNotFoundException: class path resource [log4j.properties] cannot be opened because it does not exist
+2018/12/21 06:06:39.165  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceBean': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.database.driver' in value "${jdbc.database.driver}"
+2018/12/21 06:10:50.674  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceBean': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.database.url' in value "${jdbc.database.url}"
+2018/12/21 06:13:11.947  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'roleDataSourceServiceImpl': Unsatisfied dependency expressed through field 'dataSource'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'javax.sql.DataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018/12/21 06:17:56.355  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceBean': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.database.driver' in value "${jdbc.database.driver}"
+2018/12/21 06:27:53.045  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'juiceMaker2' defined in org.jiira.chapter10.annotation.config.ApplicationConfig: Invalid destruction signature; nested exception is org.springframework.beans.factory.support.BeanDefinitionValidationException: Could not find a destroy method named 'myDestroy' on bean with name 'juiceMaker2'
+2018/12/21 06:34:13.264  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'juiceMaker2' defined in org.jiira.chapter10.annotation.config.ApplicationConfig: Invalid destruction signature; nested exception is org.springframework.beans.factory.support.BeanDefinitionValidationException: Could not find a destroy method named 'myDestroy' on bean with name 'juiceMaker2'
+2018/12/21 18:35:11.748  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'roleController': Unsatisfied dependency expressed through field 'roleService'; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'org.jiira.chapter10.annotation.service.RoleService' available: expected single matching bean but found 2: roleServiceImpl,roleService3
+2018/12/21 18:37:22.029  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'roleController2' defined in file [D:\WorkSpace\java\SSM\target\classes\org\jiira\chapter10\annotation\controller\RoleController2.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.jiira.chapter10.annotation.service.RoleService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=roleService3)}
+2018/12/21 18:38:03.050  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'roleController2' defined in file [D:\WorkSpace\java\SSM\target\classes\org\jiira\chapter10\annotation\controller\RoleController2.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.jiira.chapter10.annotation.service.RoleService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=roleService3)}
+2018/12/21 18:38:39.987  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'roleController2' defined in file [D:\WorkSpace\java\SSM\target\classes\org\jiira\chapter10\annotation\controller\RoleController2.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.jiira.chapter10.annotation.service.RoleService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=roleService3)}
+2018/12/21 18:39:22.745  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'roleController2' defined in file [D:\WorkSpace\java\SSM\target\classes\org\jiira\chapter10\annotation\controller\RoleController2.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.jiira.chapter10.annotation.service.RoleService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=roleService3)}
+2018/12/21 18:42:25.496  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'roleController2' defined in file [D:\WorkSpace\java\SSM\target\classes\org\jiira\chapter10\annotation\controller\RoleController2.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.jiira.chapter10.annotation.service.RoleService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=roleService3)}
+2018/12/21 18:43:01.875  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'roleController2' defined in file [D:\WorkSpace\java\SSM\target\classes\org\jiira\chapter10\annotation\controller\RoleController2.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.jiira.chapter10.annotation.service.RoleService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=roleService3)}
+2018/12/21 18:43:34.215  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'roleController2' defined in file [D:\WorkSpace\java\SSM\target\classes\org\jiira\chapter10\annotation\controller\RoleController2.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.jiira.chapter10.annotation.service.RoleService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=roleService3)}
+2018/12/21 18:45:18.386  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'roleController': Unsatisfied dependency expressed through field 'roleService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.jiira.chapter10.annotation.service.RoleService3' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018/12/21 18:45:56.866  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'roleController': Unsatisfied dependency expressed through field 'roleService'; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'org.jiira.chapter10.annotation.service.RoleService' available: expected single matching bean but found 2: roleServiceImpl,roleService3
+2018/12/21 20:01:17.913  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.jiira.chapter9.pojo.Role] for bean with name 'role_1' defined in class path resource [config/spring10/spring-config10.xml]; nested exception is java.lang.ClassNotFoundException: org.jiira.chapter9.pojo.Role
+2018/12/21 20:02:14.160  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.jiira.chapter10.pojo.Source] for bean with name 'source' defined in class path resource [config/spring10/spring-config10.xml]; nested exception is java.lang.ClassNotFoundException: org.jiira.chapter10.pojo.Source
+2018/12/21 20:24:11.417  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'roleDataSourceServiceImpl': Unsatisfied dependency expressed through field 'dataSource'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'javax.sql.DataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018/12/21 20:38:33.966  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'roleDataSourceServiceImpl': Unsatisfied dependency expressed through field 'dataSource'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'javax.sql.DataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018/12/21 20:39:48.125  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'roleDataSourceServiceImpl': Unsatisfied dependency expressed through field 'dataSource'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'javax.sql.DataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018/12/21 20:39:53.400  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'roleDataSourceServiceImpl': Unsatisfied dependency expressed through field 'dataSource'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'javax.sql.DataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018/12/21 20:40:33.450  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'roleDataSourceServiceImpl': Unsatisfied dependency expressed through field 'dataSource'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'javax.sql.DataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018/12/21 23:06:17.540  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aopConfig': BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.NoClassDefFoundError: org/aspectj/weaver/reflect/ReflectionWorld$ReflectionWorldException
+2018/12/21 23:09:19.514  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aopConfig': BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.NoClassDefFoundError: org/aspectj/weaver/reflect/ReflectionWorld$ReflectionWorldException
+2018/12/21 23:50:25.452  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aopConfig': BeanPostProcessor before instantiation of bean failed; nested exception is java.lang.NoClassDefFoundError: org/aspectj/weaver/reflect/ReflectionWorld$ReflectionWorldException
+2018/12/21 11:37:15.197  WARN (AbstractApplicationContext.java:554) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'aopConfig': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 can't find referenced pointcut print
