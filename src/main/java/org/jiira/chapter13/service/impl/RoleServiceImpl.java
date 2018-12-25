@@ -25,7 +25,7 @@ public class RoleServiceImpl implements RoleService, ApplicationContextAware {
 	private ApplicationContext ctx = null;
 
 	@Override
-	@Transactional(propagation = Propagation.NESTED, isolation = Isolation.READ_COMMITTED)
+	@Transactional(propagation = Propagation.REQUIRES_NEW, isolation = Isolation.READ_COMMITTED)
 	public int insertRole(Role role) {
 		return roleMapper.insertRole(role);
 	}
