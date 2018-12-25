@@ -15,11 +15,11 @@
     </settings>
     <!-- 别名配置 -->
     <typeAliases>
-        <typeAlias alias="role" type="com.ssm.chapter12.pojo.Role" />
+        <typeAlias alias="role" type="org.jiira.chapter12.pojo.Role" />
     </typeAliases>
  
     <!-- 指定映射器路径 -->
     <mappers>
-        <mapper resource="com/ssm/chapter12/sql/mapper/RoleMapper.xml" />
+        <mapper resource="org/jiira/chapter12/sql/mapper/RoleMapper.xml" />
     </mappers>
 </configuration>

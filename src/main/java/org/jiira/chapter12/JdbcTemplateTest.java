@@ -9,17 +9,18 @@ import java.util.List;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
-
+import org.apache.log4j.xml.DOMConfigurator;
 import org.jiira.chapter12.pojo.Role;
 
 public class JdbcTemplateTest {
 	public static void main(String[] args) {
+		DOMConfigurator.configureAndWatch("config/log4j.xml", 2000);
 	    ApplicationContext ctx = new ClassPathXmlApplicationContext("config/chapter12/spring-config.xml");
 	    JdbcTemplate jdbcTemplate = ctx.getBean(JdbcTemplate.class);
 	    
 	    JdbcTemplateTest test = new JdbcTemplateTest();
-	    test.getRoleByConnectionCallback(jdbcTemplate, 1L);
-	    test.getRoleByStatementCallback(jdbcTemplate, 1L);
+//	    test.getRoleByConnectionCallback(jdbcTemplate, 1L);
+//	    test.getRoleByStatementCallback(jdbcTemplate, 1L);
 	    test.insertRole(jdbcTemplate);
 	    List roleList = test.findRole(jdbcTemplate, "role");
 	    System.out.println(roleList.size());
